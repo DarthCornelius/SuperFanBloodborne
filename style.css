@@ -1,0 +1,232 @@
+/* the 100vh and 100vw set the size of the body to fill the viewport (screen) */
+
+@import url("https://fonts.googleapis.com/css2?family=MedievalSharp&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+body {
+  height: 100vh;
+  width: 100vw;
+  display: block;
+  margin: 0;
+  overflow: hidden;
+}
+
+img {
+  max-width: 70%;
+  max-height: 70%;
+}
+h1 {
+  font-family: "MedievalSharp";
+  font-style: normal;
+  text-align: center;
+  font-size: 30px;
+  color: darkred;
+}
+h11 {
+  font-family: "MedievalSharp";
+  font-size: 30px;
+  color: darkred;
+  text-align: center;
+  font-style: normal;
+}
+h111 {
+  font-family: "MedievalSharp";
+  font-size: 20px;
+  color: whitesmoke;
+  text-align: center;
+  font-style: normal;
+}
+.invisible {
+  opacity: 0;
+}
+p {
+  font-family: "Playfair", serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: lighter;
+  text-align: center;
+  color: whitesmoke;
+}
+/* build your layout */
+.top-row {
+  height: 15%;
+  width: 100%;
+  display: flex;
+}
+.hidden-row {
+  height: 100%;
+  width: 50%;
+  display: flex;
+}
+.mid-row {
+  height: 65%;
+  width: 100%;
+  display: flex;
+}
+.bot-row {
+  height: 20%;
+  width: 100%;
+  display: flex;
+}
+.box1 {
+  height: 100%;
+  width: 50%;
+}
+
+.box1:hover {
+  cursor: pointer;
+  transform: scale(1.05); /* subtle zoom-in effect */
+}
+.box1:hover::before {
+  opacity: 1; /* show the overlay */
+}
+.box1:active {
+  transform: scale(0.95); /* subtle zoom-out effect */
+}
+
+.box2 {
+  height: 100%;
+  width: 50%;
+  display: block;
+}
+.box3 {
+  height: 100%;
+  width: calc(100% / 3);
+}
+
+/* this will make ALL <img> elements at most 100% of their PARENT! */
+
+/* this class goes on the PARENT div of the image! */
+.center-content {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.center-content2 {
+  justify-content: center;
+  align-items: center;
+}
+.translucent {
+  opacity: 0.5;
+}
+.big {
+  height: 80%;
+  width: 100%;
+}
+.small {
+  height: 10%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.small2 {
+  height: 20%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  display: block;
+}
+/* colors to see divs */
+
+.black {
+  background-color: #0a0a0a;
+}
+.slate {
+  background-color: #1d1d1d;
+}
+.dark-grey {
+  background-color: #3a3b3c;
+}
+.light-blue {
+  background-color: lightblue;
+}
+
+.hover11:hover {
+  cursor: pointer;
+}
+.hover11:active {
+  transform: scale(1.25);
+  max-width: 95%;
+  max-height: 95%;
+}
+.hover:hover {
+  cursor: pointer;
+}
+.bigIMG {
+  transform: scale(1.5);
+  filter: brightness(100%) drop-shadow(3px 3px 4px);
+}
+.hover:active {
+  transform: scale(1.01);
+  max-width: 95%;
+  max-height: 95%;
+}
+.hover111 {
+  filter: brightness(85%);
+  transition: filter 0.3s ease, transform 0.3s ease; /* smooth transitions */
+}
+.hover111:hover {
+  cursor: pointer;
+  filter: brightness(100%); /* brighter and deeper shadow */
+  transform: scale(1.05); /* subtle zoom-in effect */
+}
+.hover111:active {
+  transform: scale(0.95); /* subtle zoom-out on click */
+}
+/* enhance the UX */
+/*
+img:hover {
+  cursor: pointer;
+}
+img:active {
+  transform: scale(0.95);
+}
+*/
+@media only screen and (max-width: 700px) {
+  .mid-row {
+    display: block;
+  }
+  .box2 {
+    height: 50%;
+    width: 100%;
+  }
+  h2 {
+    font-size: 13px;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  h11 {
+    font-size: 20px;
+  }
+  h111 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 410px) {
+  .top-row {
+    display: block;
+  }
+  .box1 {
+    height: 100%;
+    width: 50%;
+  }
+  .hidden-row {
+    height: 50%;
+    width: 100%;
+  }
+  h1 {
+    font-size: 15px;
+  }
+  h11 {
+    font-size: 15px;
+  }
+  h111 {
+    font-size: 10px;
+  }
+  p {
+    font-size: 9.5px;
+  }
+}

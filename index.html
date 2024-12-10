@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>SuperfanBloodborne</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <!-- to show images in the 'faces' folder you would write "images/faces/jack.png" -->
+    <div class="top-row">
+      <div class="hidden-row light-grey">
+        <div class="center-content box1 black" id="orange">
+          <img src="images/grave.jpeg" onclick="centralYharnam()" id="grave1" />
+        </div>
+        <div class="center-content box1 black" id="yellow">
+          <img src="images/frontier.jpg" onclick="oldYharnam()" id="grave2" />
+        </div>
+      </div>
+      <div class="hidden-row light-grey">
+        <div class="center-content box1 black" onclick="cathedralWard()" id="purple">
+          <img src="images/unseen.jpg" id="grave3" />
+        </div>
+        <div class="center-content box1 black" onclick="upperWard()" id="gold">
+          <img src="images/nightmare.jpg" id="grave4" />
+        </div>
+      </div>
+    </div>
+    <div class="mid-row black center-content" onclick="" id="button">
+      <div class="center-content box2 slate" id="mainImg">
+        <img src="images/gehrman.webp" onclick="soundPlay()" id="imgMain" />
+      </div>
+      <div class="center-content2 box2 slate" id="mainText">
+      
+          <h1 id="mainTitle">Welcome Honored Guest</h1>
+    
+          <p id="main-text">
+            I am Gehrman the owner of this humble travel agency. Here at the
+            Hunter's Dream we schedule premium vacations to the historic city of
+            Yharnam. Whether you're here as an aspiring student at Byrgenwyrth
+            College, a member of the Healing Church, Hunter, or any other
+            profession we will cater to your every need. No matter the reason
+            for your visit into Yharnam we guarantee only the highest quality
+            trip planning and advising. So go out and explore our vacation
+            options, it's for your own good.
+          </p>
+          <h111 id="next" class="invisible center-content hover111" onclick="nextImg()"></h111>
+        </div>
+      </div>
+    </div>
+    <div class="bot-row black">
+      <div class="center-content box3 black" id="location" onclick="locationSelect()">
+        <h11 id="location-text">10/10 - Yahar'Gul Times</h11>
+      </div>
+      <div class="center-content box3 black" onclick="localSelect()" id="locals">
+        <h11 id="local-text">Voted Best in Yharnam 4 years running</h11>
+      </div>
+      <div class="center-content box3 black" id="touristAttractions" onclick="tourSelect()">
+        <h11 id="tour-text">
+          Orphan of Kos Accredited Agency
+        </h11>
+      </div>
+    </div>
+
+    <audio src="sounds/guac-theme.mp3" id="guacTheme"></audio>
+    <audio src="sounds/vicar.mp3" id="vicarTheme"></audio>
+    <audio src="sounds/cosmos-theme.mp3" id="cosmosTheme"></audio>
+    <audio src="sounds/bloody.mp3" id="bloodyTheme"></audio>
+    <audio src="sounds/hunters-dream.mp3" id="dreamTheme"></audio>
+    <audio src="sounds/button.mp3" id="buttonSound"></audio>
+    <audio src="sounds/location.mp3" id="newLocation"></audio>
+
+
+
+    <script src="script.js"></script>
+  </body>
+</html>
